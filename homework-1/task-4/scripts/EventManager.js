@@ -22,6 +22,7 @@ class EventManager {
     }
 
     static trigger (eventName) {
+        if (!this.handlers[eventName]) return;
         this.handlers[eventName].forEach((handler) => {
             handler(eventName, this);
         })
