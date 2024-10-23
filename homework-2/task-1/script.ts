@@ -1,6 +1,6 @@
 interface Goods {
     name : string,
-    price : number,
+    price : string,
     availability : boolean,
     manufacturer? : string,
     country? : string
@@ -12,7 +12,7 @@ function renderGoods (goods : Goods) : string {
 
 const goods_1 : Goods = {
     name: 'Iphone16',
-    price: 1600,
+    price: '1600 грн',
     availability: true,
     manufacturer: 'Apple',
     country: 'USA'
@@ -20,7 +20,7 @@ const goods_1 : Goods = {
 
 const goods_2 : Goods = {
     name: 'Microwave',
-    price: 450,
+    price: '450 грн',
     availability: true
 }
 
@@ -31,35 +31,14 @@ console.log('-----------');
 
 
 
-
-function renderProduct(product : { name : string, price : number, availability : boolean, manufacturer? : string, country? : string }) : string {
-    return JSON.stringify(product);
-}
-
-const product_1 : { name : string, price : number, availability : boolean, manufacturer : string, country : string } = {
-    name: 'Screen',
-    price: 600,
-    availability: true,
-    manufacturer: 'Samsung',
-    country: 'Korea'
-}
-console.log(typeof renderProduct(product_1), renderProduct(product_1));
-console.log('-----------');
-
-
-
-
-
-
-
-type Product = { name : string, price : number, availability : boolean, manufacturer? : string, country? : string };
+type Product = { name : string, price : string, availability : boolean, manufacturer? : string, country? : string };
 
 function renderProduct2 (product : Product) : string {
     return JSON.stringify(product);
 }
 const product_2: Product = {
     name: 'Headphones',
-    price: 200,
+    price: '200 грн',
     availability: true,
     manufacturer: 'Xiaomi',
     country: 'China'
