@@ -1,10 +1,8 @@
 "use strict";
-const array = [1, 2, 'goods', 'bottle', true, undefined, null];
-console.log('before: ', array);
+const array = [1, 2, 'goods', 'bottle', true];
 function reverseArray(arr) {
     return arr.reverse();
 }
-console.log('after: ', reverseArray(array));
-console.log('finally: ', array);
-console.log(Array.prototype);
+const reversedArr = reverseArray(array);
+console.log(array === reversedArr);
 //# sourceMappingURL=script.js.map
